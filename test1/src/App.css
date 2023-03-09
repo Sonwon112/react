@@ -1,4 +1,12 @@
-.App {
-  color:red;
-  background-color: yellow;
+.App{
+  background-color: black;
+  text-align: center;
+  width: 50%;
+}
+.title {
+  color:yellow;
+}
+.content{
+  background-color: bisque;
+  color:cadetblue;
 }
