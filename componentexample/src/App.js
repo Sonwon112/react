@@ -2,42 +2,32 @@ import './App.css';
 
 function Header(){
   return(
-    <header>
-      <h1><a href="">WEB</a></h1>
-    </header>
+    <h1><a href = "">React</a></h1>
   )
 }
 
-function Nav(){
+function Listcontent(){
+  let contentText = "기본";
   return(
-    <nav>
-        <ol>
-          <li><a href = "/rr/1">html</a></li>
-          <li><a href = "/rr/2">css</a></li>
-          <li><a href = "/rr/3">javascript</a></li>
-        </ol>
-      </nav>
+    <p><a hreft = "">{contentText}</a></p>
   )
 }
 
-function Article(){
-  return(
-    <article>
-        <h2>환영!</h2>
-        Hello WEB programming
-      </article>
-  )
+function Content(){
 }
 
 function App() {
   return (
     <div className="App">
-      <Header className = "First"/>
-      <Header className = "Second"/>
+      <Header></Header>
       <hr/>
-      <Nav/>
-      <Article/>
-            
+      <dl>
+        <dt>개요</dt>
+        <dd><Listcontent></Listcontent></dd>
+        <dd></dd>
+        <dd></dd>
+      </dl>
+      <Content></Content>      
     </div>
   );
 }
