@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+    <h1 id="test">제목</h1>
+    <script>
+        var x = document.getElementById('test');
+        const d1 = document.createElement('div');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        p1.textContent = "먼저 생성된 p";
+        p2.textContent = "나중에 생성된 p"
+        x.appendChild(d1);
+        d1.appendChild(p1);
+        d1.appendChild(p2);
+        
+    </script>
+</body>
