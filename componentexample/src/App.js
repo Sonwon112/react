@@ -1,36 +1,19 @@
 import './App.css';
-
-function Header(){
-  return(
-    <h1><a href = "">React</a></h1>
-  )
-}
-
-function Listcontent(){
-  let contentText = "기본";
-  return(
-    <p><a hreft = "">{contentText}</a></p>
-  )
-}
-
-function Content(){
-  return(
-    <h3>hello webProgramming</h3>
-  )
-}
+import Header from './component/Header';
+import List from './component/List';
+import Content from './component/Content';
+import Box from './component/Box'
 
 function App() {
+  const contentArr = ['개요','1장','2장']
+
   return (
     <div className="App">
-      <Header></Header>
+      <Header/>
       <hr/>
-      <dl>
-        <dt>개요</dt>
-        <dd><Listcontent></Listcontent></dd>
-        <dd></dd>
-        <dd></dd>
-      </dl>
-      <Content></Content>      
+      <List titile = "목차" content = {contentArr}/>
+      <Content/>
+      <Box name = "테스트"/>
     </div>
   );
 }
