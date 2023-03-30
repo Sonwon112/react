@@ -1,12 +1,18 @@
 import React from 'react';
 import Comment from './Comment';
+import userCommentJSON from '../userComments.json';
+
+const user_Comment = Object.values(userCommentJSON);
+
 
 const CommentList = ()=>{
     return(
         <div className='commentList'>
-            <Comment name = {'세종대왕'} comment = {'안녕!'}/>
-            <Comment name = {'Biden'} comment = {'goodbye!'}/>
-            <Comment name = {'강호동'} comment = {'리액트 공부하나'}/>
+            {user_Comment.map(v=>{
+                return (
+                    <Comment name = {v.name} comment = {v.comment}/>
+                )
+            })}
         </div>
     )
 }
