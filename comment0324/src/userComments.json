@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "세종대왕",
+        "comment" : "안녕!"  
+    },
+    {
+        "name" : "Biden",
+        "comment" : "goodbye!"
+    },
+    {
+        "name" : "강호동",
+        "comment" : "리액트 공부하나"
+    },
+    {
+        "name" : "유재석",
+        "comment" : "JSP 공부한다"
+    },
+    {
+        "name" : "홍길동",
+        "comment" : "구라 ㄴ"
+    }
+]
