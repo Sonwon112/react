@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  
+}
+
+.listContent{
+  width: 200px;
+  height: 20px;
+  margin : 10px auto;
+  border : 2px dotted aqua;
+  display: flex;
+}
+
+.listContent > button{
+  margin-left: auto;
+}
