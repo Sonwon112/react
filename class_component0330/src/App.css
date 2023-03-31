@@ -1,6 +1,6 @@
-hr{
+/*hr{
   border: 5px solid gold;
-}
+}*/
 .box{
   background-color: darkcyan;
   border: 2px dotted black;
@@ -9,11 +9,7 @@ hr{
   display: flex;  
   align-items: center;
 }
-.box2{
-  background-color: darkkhaki;
-  border: 2px dotted black;
-  width: 150px;
-  height: 100px;
-  display: flex;  
-  align-items: center;
+
+.App{
+  text-align: center;
 }
