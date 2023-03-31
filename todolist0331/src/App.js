@@ -2,8 +2,6 @@ import React,{useState} from 'react';
 import './App.css';
 import TodoListBoaard from './component/TodoListBoaard';
 
-
-
 function App() {
   const [inputText,setInputText] = useState("");
   const [listData,setListData] = useState([]);
@@ -12,14 +10,16 @@ function App() {
 
   const addData = ()=>{
     setListData([...listData,inputText]);
-    document.getElementById()
+    //document.getElementById()
   }
 
   const deleteData = (index)=>{
     listData.splice(index,1);
     setListData([...listData]);
+    
     //console.log(listData);
   }
+
 
   const clear = ()=>{
     listData.splice(0);
