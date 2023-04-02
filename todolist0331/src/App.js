@@ -1,16 +1,19 @@
 import React,{useState} from 'react';
 import './App.css';
-import TodoListBoaard from './component/TodoListBoaard';
+import TodoListBoard from './component/TodoListBoard';
 
 function App() {
   const [inputText,setInputText] = useState("");
   const [listData,setListData] = useState([]);
   
 
-
   const addData = ()=>{
-    setListData([...listData,inputText]);
-    //document.getElementById()
+    if(!inputText == ''){
+      setListData([...listData,inputText]);
+      setInputText("");
+    }else{
+      alert("텍스트를 입력하세요");
+    }
   }
 
   const deleteData = (index)=>{
@@ -29,11 +32,11 @@ function App() {
 
   return (
     <div className="App">
-      <input id="todoListInput" onChange={event=>{setInputText(event.target.value)}}></input>
+      <input id="todoListInput" value={inputText} onChange={event=>{setInputText(event.target.value)}}></input>
       <button onClick={addData}>추가</button>
       <button onClick={clear}>전체 삭제</button>
       <hr/>
-      <TodoListBoaard data={listData} deleteData = {deleteData}/>
+      <TodoListBoard data={listData} deleteData = {deleteData}/>
     </div>
   );
 }

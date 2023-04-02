@@ -1,11 +1,11 @@
 import React from 'react'
 import '../App.css'
 
-
-
 const TodoListContent = (props) => {
+    
     const deleteListContent = ()=>{
         props.deleteData(props.index);
+        
     }
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoListContent from './TodoListContent'
 
-const TodoListBoaard = (props) => {
+const TodoListBoard = (props) => {
   return (
     <div>
         <h1>Todo List</h1>
@@ -12,4 +12,4 @@ const TodoListBoaard = (props) => {
   )
 }
 
-export default TodoListBoaard
+export default TodoListBoard
