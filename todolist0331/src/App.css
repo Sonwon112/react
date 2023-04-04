@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+<<<<<<< HEAD
   
 }
 
@@ -8,6 +9,15 @@
   height: 20px;
   margin : 10px auto;
   border : 2px dotted aqua;
+=======
+}
+
+.listContent{
+  width: 350px;
+  height: 40px;
+  margin : 10px auto;
+  border : 3px dotted aqua;
+>>>>>>> 4668d13a983dd76a575ff5b332724aa35581e59e
   display: flex;
 }
 
