@@ -3,10 +3,8 @@ import "../App.css"
 
 export default class TodoListContent extends Component {
 
-    
-
     deleteContent = ()=>{
-        this.props.deleteItem(this.props.item);
+        this.props.deleteData(this.props.index);
     }
 
     render() {

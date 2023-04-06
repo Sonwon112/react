@@ -33,9 +33,11 @@ function App() {
       <button onClick={clear}>전체 삭제</button>
       <hr/>
       <TodoListBoard data={listData} deleteData = {deleteData}/>
+      
     </div>
   );
   
 }
 
 export default App
+

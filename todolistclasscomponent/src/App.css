@@ -1,15 +1,13 @@
 .App {
   text-align: center;
 }
-
 .listContent{
   width: 350px;
   height: 40px;
   margin : 10px auto;
-  border : 3px dotted aqua;
+  border : 3px dotted gold;
   display: flex;
 }
-
 .listContent > button{
   margin-left: auto;
 }
