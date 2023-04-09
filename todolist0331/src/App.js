@@ -2,14 +2,22 @@ import React,{useState} from 'react';
 import './App.css'
 import TodoListBoard from './component/TodoListBoard'
 
+let posCount = 0;
+
 function App() {
   const [inputText,setInputText] = useState("");
   const [listData,setListData] = useState([]);
   
+  
+  const colorArr = ['red','blue','yellow','aqua','gold'];
+
+
   const addData = ()=>{
     if(!inputText == ''){
-      setListData([...listData,inputText]);
+      posCount= posCount + 1;
+      setListData([...listData,[posCount,inputText]]);
       setInputText("");
+      console.log(listData);
     }else{
       alert("텍스트를 입력하세요");
     }
@@ -24,6 +32,19 @@ function App() {
     setListData([...listData]);
   }
 
+  const exactlyClear = ()=>{
+    // setListCount(0);  
+    posCount = 0;
+    clear();
+  }
+
+  const chageColor = ()=>{
+    document.body.style.backgroundColor=colorArr[randomColor()]
+  }
+  const randomColor = ()=>{
+    return parseInt(Math.random()*colorArr.length);
+  }
+
 
   return (
     <div className="App">
@@ -34,6 +55,10 @@ function App() {
       <hr/>
       <TodoListBoard data={listData} deleteData = {deleteData}/>
       
+      <div className='bottomButton'>
+        <button  onClick={exactlyClear}>완전 삭제</button>
+        <button  onClick={chageColor}>색 변경</button>
+      </div>
     </div>
   );
   

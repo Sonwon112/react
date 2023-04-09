@@ -1,13 +1,21 @@
-.App {
-  text-align: center;
+.bottomButton{
+  position: absolute;
+  bottom: 0;
+}
+.listTitle{
+  float: left;
 }
 
 .listContent{
-  width: 350px;
+  width: 310px;
   height: 40px;
-  margin : 10px auto;
-  border : 3px dotted aqua;
+  border : 3px dotted gold;
+  background-color: white;
   display: flex;
+}
+
+.listContent > .listPos{
+  margin-right: 0;
 }
 
 .listContent > button{

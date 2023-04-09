@@ -12,6 +12,7 @@ export default class App extends Component {
   }
   addData = ()=>{
     this.setState({dataArr : [...this.state.dataArr,this.state.inputData]});
+    this.getInputText("");
     // console.log(this.state.dataArr);
   }
   deleteData = (index)=>{
@@ -26,7 +27,7 @@ export default class App extends Component {
   render(){
     return (
       <div className="App">
-          <input onChange={(e)=>{this.getInputText(e.target.value)}}></input>
+          <input value={this.state.inputData} onChange={(e)=>{this.getInputText(e.target.value)}}></input>
           <button onClick={this.addData}>추가</button>
           <button onClick={this.clearData}>전체 삭제</button>
           <hr/>

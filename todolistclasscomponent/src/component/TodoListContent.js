@@ -9,10 +9,13 @@ export default class TodoListContent extends Component {
 
     render() {
         return (
-            <div className='listContent'>
+            <div>
+                <div className='listContent'>
                 {this.props.value}
                 <button onClick={this.deleteContent}>삭제</button>
             </div>
+            </div>
+            
         )
   }
 }
