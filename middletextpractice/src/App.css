@@ -1,0 +1,25 @@
+.App {
+  padding: 10px;
+}
+.App > button{
+  margin : 0px 0px 0px 10px;
+}
+
+.listContent{
+  display: flex;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.listContent > div{
+  width: 300px;
+  height: 40px;
+  border: 2px solid black;
+  display: flex;
+  margin-right: 10px;
+}
+.editButton {
+  margin-left: auto;
+}
+.editBox > button{
+  margin-left: auto;
+}
