@@ -16,8 +16,17 @@ function App() {
 
   const deleteData = (index)=>{
     setDataArr((prev)=>{
+      const flagArr = prev.filter((v,i)=>i !== index);
+      // const flagArr = [...prev];
+      // flagArr.splice(index,1);
+      return(flagArr);
+    })
+  }
+
+  const editData = (value, index) => {
+    setDataArr((prev)=>{
       const flagArr = [...prev];
-      flagArr.splice(index,1);
+      flagArr[index] = value;
       return(flagArr);
     })
   }
@@ -42,7 +51,7 @@ function App() {
       <input value={input} onChange={(e)=>{setInput(e.target.value)}}></input>
       <button onClick={addData}>추가</button>
       <button onClick={clearData}>삭제</button>
-      <TodoListBoard dataArr={dataArr} deleteData={deleteData}/>
+      <TodoListBoard dataArr={dataArr} deleteData={deleteData} editData={editData}/>
     </div>
   );
 }

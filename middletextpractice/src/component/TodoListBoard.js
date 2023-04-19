@@ -5,7 +5,7 @@ const TodoListBoard = (props) => {
   return (
     <div className='listBoard'>
         {props.dataArr.map((v,i)=>{
-            return(<TodoListContent key={i} data={v} index={i} deleteData={props.deleteData}/>)
+            return(<TodoListContent key={i} data={v} index={i} deleteData={props.deleteData} editData={props.editData}/>)
         })}
     </div>
   )
