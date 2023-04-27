@@ -43,7 +43,7 @@ const TodoListContent = (props) => {
     return (
         <div className="listContent">
             {props.index + 1}.
-            <div id={`list${props.index}`}>{props.data}
+            <div style={{color : "red",backgroundColor : "gold"}} id={`list${props.index}`}>{props.data}
                 <button className='editButton' onClick={editClick}>수정</button>
                 <button className='deletButton' onClick={clickedButton}>삭제</button>
             </div>

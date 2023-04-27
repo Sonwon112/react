@@ -1,0 +1,9 @@
+.title{
+  display: flex;
+  flex-direction: row;
+}
+
+#clock{
+  margin-left: auto;
+  margin-top: auto;
+}

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './App.css'
 import TodoListBoard from './component/TodoListBoard'
+import logo from './logo.svg'
 
 let posCount = 0;
 
@@ -48,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <img src={logo}/>
       <input id="todoListInput" value={inputText} onChange={event=>{setInputText(event.target.value)}}></input>
       <button onClick={addData}>추가</button>
       <button onClick={clear}>전체 삭제</button>

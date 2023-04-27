@@ -1,0 +1,52 @@
+#contentInput{
+    margin-left: 10px;
+    font-size: 30px;
+}
+#addBtn{
+    margin-left: 10px;
+    width: 80px;
+    height: 50px;
+    font-size: 30px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    color: white
+}
+
+#addBtn:active{
+    background-color: blue;
+}
+
+.listContent{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.contentBox{
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px dotted black;
+    width: 400px;
+    height: 40px;
+}
+
+.contentBox > #deleteBtn{
+    margin-left: auto;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    color: white;
+}
+
+.contentBox > #deleteBtn:active{
+    background-color: blue;
+}
+
+.contentBox > #editBtn{
+    background-color: beige;
+    border-radius: 10px;
+    color: black;
+}
+
+.contentBox > #editBtn:active{
+    background-color: burlywood;
+}
