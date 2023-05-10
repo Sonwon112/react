@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [cnt,setCnt] = useState(0);
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);  
 
   const increaseCnt = ()=>{
     setCnt(cnt+1)
