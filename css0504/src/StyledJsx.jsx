@@ -25,6 +25,11 @@ export const StyledJsx = ()=>{
                     padding:8px;
                     border-radius:8px
                 }
+                .button:hover{
+                    background-color: #aaa;
+                    color: #fff;
+                    cursor: pointer;
+                }
             
             `}</style>
         </>
