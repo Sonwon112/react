@@ -1,0 +1,75 @@
+import React from 'react'
+import searchBtnThemeWhite from '../res/search_btn_theme_white.png';
+import serachBtnThemeWhite_hover from '../res/search_btn_theme_white_hover.png';
+import settingBtnThemeWhite from '../res/setting_btn_theme_white.png';
+import settingBtnThemeWhite_hover from '../res/setting_btn_theme_white_hover.png';
+
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeContext';
+
+
+function SearchBar() {
+
+    const {theme} = useContext(ThemeContext);
+
+    const searchBtnMouseOver = ()=>{
+        let searchBtn = document.getElementById(`searchBtn_${theme}`);
+        switch(theme){
+            case 'white':
+                searchBtn.style.backgroundColor = '#C9C7C7';
+                searchBtn.src = serachBtnThemeWhite_hover;
+                break;
+            case 'black':
+                
+                break;
+        }
+    };
+
+    const searchBtnMouseLeave = ()=>{
+        let searchBtn = document.getElementById(`searchBtn_${theme}`);
+        switch(theme){
+            case 'white':
+                searchBtn.style.backgroundColor = '#ffffff';
+                searchBtn.src = searchBtnThemeWhite;
+                break;
+            case 'black':
+                break;
+        }
+    };
+
+    const settingBtnMouseOver = ()=>{
+        let settingBtn = document.getElementById(`settingBtn_${theme}`);
+        switch(theme){
+            case 'white' :
+                settingBtn.style.backgroundColor = '#C9C7C7';
+                settingBtn.src = settingBtnThemeWhite_hover;
+                break;
+            case 'black' :
+                break;
+        }
+    }
+    const settingBtnMouseLeave = ()=>{
+        let settingBtn = document.getElementById(`settingBtn_${theme}`);
+        switch(theme){
+            case 'white' :
+                settingBtn.style.backgroundColor = '#ffffff';
+                settingBtn.src = settingBtnThemeWhite;
+                break;
+            case 'black' :
+                break;
+        }
+    }
+
+
+    return (
+        <div className='searchTitle' id={theme}>
+            <div style={{display:'flex',flexDirection:'row'}}>
+                <input className='searchBar' id={theme} type='text'></input>
+                <input id={`searchBtn_${theme}`} type='image' src={searchBtnThemeWhite} alt='검색버튼' onMouseOver={searchBtnMouseOver} onMouseLeave={searchBtnMouseLeave}></input>
+            </div>
+            <input id={`settingBtn_${theme}`} type='image' alt='설정' src={settingBtnThemeWhite} onMouseOver={settingBtnMouseOver} onMouseLeave={settingBtnMouseLeave}></input>
+        </div>
+    )
+}
+
+export default SearchBar

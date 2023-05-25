@@ -1,0 +1,82 @@
+.App{
+    padding:0;
+}
+
+#white{
+    border: solid 2px #C9C7C7;
+}
+
+.searchTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top : 10px;
+    padding-bottom: 10px;
+}
+.searchBar{
+    width: 350px;
+    height: 30px;
+    border-radius: 20px;
+}
+.searchBar:focus{
+    outline: none;
+}
+
+#searchBtn_white{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+#searchBtn_black{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+#settingBtn_white{
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 40%;
+    transition: all 0.2s;
+}
+
+#settingBtn_black{
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 40%;
+    transition: all 0.2s;
+}
+
+.chattingBox{
+    height: 93vh;
+    width : 350px;
+    position: absolute;
+    right: 0;
+}
+
+.inputChatBox{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 86.7vh;
+    height: 60px;
+    align-items: center;
+}
+
+.inputChat_white{
+    height: 30px;
+    background-color: #C9C7C7;
+    border: white 2px solid;
+    border-radius: 8px;
+}
+.inputChat_white:focus{
+    outline: none;
+}
