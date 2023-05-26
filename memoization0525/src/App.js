@@ -72,7 +72,8 @@ import { useState, memo, useCallback, useMemo, useEffect } from 'react';
 function App(){
   const [num, setNum] = useState(0); 
   const [isKorea, setIsKorea] = useState(true);
-  const location =  isKorea ? '한국' : '미국';
+  const location =  useMemo(()=>{
+    return {country : isKorea ? '한국' : '미국'} },[isKorea]);
   useEffect(()=>{console.log("UseEffect 호출")},[location]);
 
   return(
@@ -83,7 +84,7 @@ function App(){
              onChange={(e)=>setNum(e.target.value)} />
       <hr />
       <h2>한국에 있니? 미국에 있니?</h2>
-      <p>장소 : {location}</p>
+      <p>장소 : {location.country}</p>
       <button onClick={()=>setIsKorea(!isKorea)}>Toggle</button>
     </div>
   )
