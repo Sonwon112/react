@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{memo} from 'react'
 
-const ChattingText = () => {
+const ChattingText = memo(() => {
   return (
     <div>
         <div className='chatTimeText'></div>
@@ -8,6 +8,6 @@ const ChattingText = () => {
         <div></div>
     </div>
   )
-}
+});
 
 export default ChattingText
