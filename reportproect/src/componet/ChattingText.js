@@ -1,11 +1,12 @@
 import React,{memo} from 'react'
 
-const ChattingText = memo(() => {
+const ChattingText = memo((props) => {
+
   return (
-    <div>
-        <div className='chatTimeText'></div>
-        <div className='chatUserText'></div>
-        <div></div>
+    <div style={{display:"flex",flexDirection:"row"}}>
+        <div className='chatTimeText' style={{color:'#aaaaaa'}}>{props.time}</div>
+        <div className='chatUserText' style={{color:`${props.userColor}`}}>&nbsp;{props.user}:</div>
+        <div className='chatText'>&nbsp;{props.text}</div>
     </div>
   )
 });

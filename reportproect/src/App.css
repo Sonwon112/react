@@ -2,6 +2,56 @@
     padding:0;
 }
 
+.setNicknameBackground{
+    position : absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.setNicknameBox_white{
+    padding :20px;
+    width: 500px;
+    margin-top: 300px;
+    height: 300px;
+    background-color: #C9C7C7;
+    border-radius: 20px;
+}
+
+.setNicknameBox_white > .inputNickname{
+    display:block;
+    height: 25px;
+    width: 350px; 
+    margin : 60px auto;
+    text-indent: 2em;
+    font-size: 15px;
+    color:white;
+    background-color: #C9C7C7;
+    border-radius: 20px;
+    border : solid 3px white;
+}
+.setNicknameBox_white > .inputNickname:focus{
+    outline: none;
+}
+
+.setNicknameBox_white > .inputBtn{
+    display: block;
+    font-size: 18px;
+    margin-left: 380px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: #b9b7b7;
+    border-radius: 10px;
+    border: solid 2px white;
+}
+
+.setNicknameBox_white > .inputBtn:hover{
+    background-color: #494747;
+}
+
+
+
 #white{
     border: solid 2px #C9C7C7;
 }
@@ -17,6 +67,7 @@
     width: 350px;
     height: 30px;
     border-radius: 20px;
+    text-indent: 2em;
 }
 .searchBar:focus{
     outline: none;
@@ -30,24 +81,7 @@
     transition: all 0.2s;
 }
 
-#searchBtn_black{
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    border-radius: 50%;
-    transition: all 0.2s;
-}
-
 #settingBtn_white{
-    position: absolute;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    border-radius: 40%;
-    transition: all 0.2s;
-}
-
-#settingBtn_black{
     position: absolute;
     right: 20px;
     width: 30px;
@@ -66,7 +100,6 @@
 .inputChatBox{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 86.7vh;
     height: 60px;
     align-items: center;
 }
@@ -79,4 +112,12 @@
 }
 .inputChat_white:focus{
     outline: none;
+}
+
+.sendBtn{
+    height: 30px;
+    background-color: #b9b7b7;
+    border-radius: 10px;
+    border: solid 2px white;
+    color: white;
 }
