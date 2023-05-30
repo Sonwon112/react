@@ -8,7 +8,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../ThemeContext';
 
 
-function SearchBar() {
+function SearchBar(props) {
 
     const {theme} = useContext(ThemeContext);
 
@@ -59,15 +59,18 @@ function SearchBar() {
                 break;
         }
     }
+    const clickSetting = ()=>{
+        props.convertIsSettingOn((prev)=>!prev);
+    }
 
 
     return (
         <div className='searchTitle' id={theme}>
             <div style={{display:'flex',flexDirection:'row'}}>
-                <input className='searchBar' id={theme} type='text'></input>
+                <input className='searchBar' id={theme} type='text' placeholder='검색'></input>
                 <input id={`searchBtn_${theme}`} type='image' src={searchBtnThemeWhite} alt='검색버튼' onMouseOver={searchBtnMouseOver} onMouseLeave={searchBtnMouseLeave}></input>
             </div>
-            <input id={`settingBtn_${theme}`} type='image' alt='설정' src={settingBtnThemeWhite} onMouseOver={settingBtnMouseOver} onMouseLeave={settingBtnMouseLeave}></input>
+            <input id={`settingBtn_${theme}`} type='image' alt='설정' src={settingBtnThemeWhite} onMouseOver={settingBtnMouseOver} onMouseLeave={settingBtnMouseLeave} onClick={clickSetting}></input>
         </div>
     )
 }

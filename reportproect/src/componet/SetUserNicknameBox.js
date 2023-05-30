@@ -20,7 +20,7 @@ const SetUserNicknameBox = () => {
       <div className={`setNicknameBox_${theme}`} id='white'>
         <h3 style={{color:'white'}}>닉네임을 입력해주세요</h3>
         <p id='alertMessage'><br/></p>
-        <input className='inputNickname' type='text'value={nickName} onChange={(e)=>{setNickName(e.target.value)}}></input>
+        <input className='inputNickname' type='text'value={nickName} onChange={(e)=>{setNickName(e.target.value)}} placeholder='닉네임'></input>
         <br/>
         <button className='inputBtn' onClick={clickSetUser}>입력</button>
       </div>
