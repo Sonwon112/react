@@ -2,6 +2,7 @@ import React,{useContext} from 'react'
 import { ThemeContext } from '../ThemeContext'
 
 const ColorPalette = (props) => {
+    // console.log("ColorPalette");
     const style = {
         "backgroundColor" : props.color,
         "height":"30px",

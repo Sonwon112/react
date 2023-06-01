@@ -5,15 +5,12 @@ import { ThemeContext } from '../ThemeContext'
 import chatSettingBtn from '../res/chat_setting_btn.png';
 import chatSettingBtnHover from '../res/chat_setting_btn_hover.png';
 
-const white_style={
-    "backgroundColor":"#C9C7C7",
-
-}
 const black_style={
 
 }
 
 const InputChat = (props) => {
+    // console.log("InputChat");
     const {theme} = useContext(ThemeContext);
     const {user} = useContext(ThemeContext);
     const [inputData, setInputData] = useState("");
@@ -52,10 +49,10 @@ const InputChat = (props) => {
 
 
   return (
-    <div className='inputChatBox' style={white_style}>
+    <div className={`inputChatBox_${theme}`}>
         <input type='image' className='chatSetting' src={chatSettingBtn} alt='설정' onMouseOver={overMouseChatSetting} onMouseLeave={leaveMouseChatSetting} onClick={clickChatSetting}></input>
         <input type='text ' value={inputData} className={`inputChat_${theme}`} style={{width:"200px"}} onChange={(e)=>{setInputData(e.target.value)}} placeholder='메시지 보내기'></input>
-        <button className='sendBtn' onClick={send}>보내기</button>
+        <button className={`sendBtn_${theme}`} onClick={send}>보내기</button>
     </div>
   )
 }

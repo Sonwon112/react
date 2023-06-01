@@ -2,6 +2,7 @@ import React,{memo} from 'react'
 import ColorPalette from './ColorPalette';
 
 const SettingChat = memo((props) => {
+    // console.log(SettingChat);
     const colorArr = ["red","yellow","black","pink","violet","lightgreen"];
     const clickClose = ()=>{
         props.convertIsSetting((prev)=>!prev);

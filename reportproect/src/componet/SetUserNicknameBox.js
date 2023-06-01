@@ -1,7 +1,8 @@
 import React,{useContext,useState} from 'react'
 import { ThemeContext } from '../ThemeContext'
 
-const SetUserNicknameBox = () => {
+const SetUserNicknameBox = () => { 
+  // console.log("SetUserNicknameBox");
 
   const {theme} = useContext(ThemeContext);
   const {setUser} = useContext(ThemeContext);

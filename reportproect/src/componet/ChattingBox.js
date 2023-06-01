@@ -7,6 +7,7 @@ import ShowChat from './ShowChat'
 import SettingChat from './SettingChat'
 
 const ChattingBox = () => {
+    // console.log("chattingBox");
     const {theme} = useContext(ThemeContext);
     const [chatRecord, setChateRecord] = useState([]);
     const [isShowSetting, setIsShowSetting] = useState(false);

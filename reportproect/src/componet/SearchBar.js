@@ -9,7 +9,7 @@ import { ThemeContext } from '../ThemeContext';
 
 
 function SearchBar(props) {
-
+    // console.log("SearchBar");
     const {theme} = useContext(ThemeContext);
 
     const searchBtnMouseOver = ()=>{
@@ -38,7 +38,7 @@ function SearchBar(props) {
     };
 
     const settingBtnMouseOver = ()=>{
-        let settingBtn = document.getElementById(`settingBtn_${theme}`);
+        let settingBtn = document.getElementById(`settingBtn`);
         switch(theme){
             case 'white' :
                 settingBtn.style.backgroundColor = '#C9C7C7';
@@ -49,7 +49,7 @@ function SearchBar(props) {
         }
     }
     const settingBtnMouseLeave = ()=>{
-        let settingBtn = document.getElementById(`settingBtn_${theme}`);
+        let settingBtn = document.getElementById(`settingBtn`);
         switch(theme){
             case 'white' :
                 settingBtn.style.backgroundColor = '#ffffff';
@@ -67,10 +67,10 @@ function SearchBar(props) {
     return (
         <div className='searchTitle' id={theme}>
             <div style={{display:'flex',flexDirection:'row'}}>
-                <input className='searchBar' id={theme} type='text' placeholder='검색'></input>
-                <input id={`searchBtn_${theme}`} type='image' src={searchBtnThemeWhite} alt='검색버튼' onMouseOver={searchBtnMouseOver} onMouseLeave={searchBtnMouseLeave}></input>
+                <input className={`searchBar_${theme}`} type='text' placeholder='검색'></input>
+                <input id={`searchBtn`} type='image' src={searchBtnThemeWhite} alt='검색버튼' onMouseOver={searchBtnMouseOver} onMouseLeave={searchBtnMouseLeave}></input>
             </div>
-            <input id={`settingBtn_${theme}`} type='image' alt='설정' src={settingBtnThemeWhite} onMouseOver={settingBtnMouseOver} onMouseLeave={settingBtnMouseLeave} onClick={clickSetting}></input>
+            <input id={`settingBtn`} type='image' alt='설정' src={settingBtnThemeWhite} onMouseOver={settingBtnMouseOver} onMouseLeave={settingBtnMouseLeave} onClick={clickSetting}></input>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React,{memo} from 'react'
 
 const ChattingText = memo((props) => {
-
+  // console.log("ChattingText");
   return (
     <div style={{display:"flex",flexDirection:"row"}}>
         <div className='chatTimeText' style={{color:'#aaaaaa'}}>{props.time}</div>

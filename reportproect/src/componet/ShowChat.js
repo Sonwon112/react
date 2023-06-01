@@ -4,6 +4,7 @@ import ChattingText from './ChattingText'
 import { ThemeContext } from '../ThemeContext'
 
 const ShowChat = (props) => {
+  // console.log("ShowChat");
   const {user} = useContext(ThemeContext);
   const {userColor} = useContext(ThemeContext);
   return (
