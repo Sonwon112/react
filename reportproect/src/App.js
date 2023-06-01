@@ -29,7 +29,7 @@ function App() {
         {/*사이트 최초로 열경우 사용자 닉네임을 입력하게끔 하기 위한 닉네임 입력창*/}
         {user==="none"?<SetUserNicknameBox/>:false}
         {/*검색창의 설정 버튼을 누르면 표시되는 설정창*/}
-        {isSettingOn?<SettingBox convertIsSettingOn={setIsSettingOn}/>:false}
+        {isSettingOn?<SettingBox convertIsSettingOn={setIsSettingOn} theme={theme}/>:false}
     </div>
   );
 }

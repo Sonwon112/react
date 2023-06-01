@@ -16,6 +16,7 @@
     justify-content: center;
     width: 100%;
 }
+
 .setNicknameBox_white{
     padding :20px;
     width: 500px;
@@ -24,7 +25,6 @@
     background-color: #C9C7C7;
     border-radius: 20px;
 }
-
 .setNicknameBox_black{
     padding :20px;
     width: 500px;
@@ -35,7 +35,7 @@
 }
 
 
-.inputNickname{
+.inputNickname_white{
     display:block;
     height: 25px;
     width: 350px; 
@@ -47,14 +47,26 @@
     border-radius: 20px;
     border : solid 3px white;
 }
-.inputNickname:focus{
+.inputNickname_black{
+    display:block;
+    height: 25px;
+    width: 350px; 
+    margin : 60px auto;
+    text-indent: 2em;
+    font-size: 15px;
+    color:white;
+    background-color:black;
+    border-radius: 20px;
+    border : solid 3px white;
+}
+.inputNickname_white:focus, .inputNickname_black:focus{
     outline: none;
 }
-.inputNickname::placeholder{
+.inputNickname_white::placeholder, .inputNickname_black::placeholder{
     color:white;
 }
 
-.inputBtn{
+.inputBtn_white{
     display: block;
     font-size: 18px;
     margin-left: 380px;
@@ -65,9 +77,23 @@
     border-radius: 10px;
     border: solid 2px white;
 }
-
-.inputBtn:hover{
+.inputBtn_white:hover{
     background-color: #494747;
+}
+.inputBtn_black{
+    display: block;
+    font-size: 18px;
+    margin-left: 380px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: solid 2px white;
+}
+.inputBtn_black:hover{
+    background-color:white;
+    color:black;
 }
 
 .searchTitle{
@@ -77,6 +103,7 @@
     padding-top : 10px;
     padding-bottom: 10px;
 }
+
 .searchBar_white{
     width: 350px;
     height: 30px;
@@ -86,7 +113,6 @@
     color:black;
     border: solid 2px #C9C7C7;
 }
-
 .searchBar_black{
     width: 350px;
     height: 30px;
@@ -96,9 +122,6 @@
     color:white;
     border: solid 2px #666666;
 }
-
-
-
 .searchBar_white:focus,.searchBar_black:focus{
     outline: none;
 }
@@ -108,7 +131,6 @@
     height: 30px;
     margin-left: 10px;
     border-radius: 50%;
-    transition: all 0.2s;
 }
 
 #settingBtn{
@@ -117,9 +139,7 @@
     width: 30px;
     height: 30px;
     border-radius: 40%;
-    transition: all 0.2s;
 }
-
 
 .chattingBox{
     height: 93vh;
@@ -128,7 +148,6 @@
     right: 0;
 }
 
-
 .inputChatBox_white{
     background-color: #C9C7C7;
     display: flex;
@@ -136,16 +155,14 @@
     height: 60px;
     align-items: center;
 }
-
 .inputChatBox_black{
     background-color: black;
     border-top: #666666 solid 2px;
     display: flex;
     justify-content: space-evenly;
-    height: 60px;
+    height: 58px;
     align-items: center;
 }
-
 
 .inputChat_white{
     text-indent: 1em;
@@ -161,7 +178,6 @@
 .inputChat_white::placeholder, .inputChat_black::placeholder{
     color:white;
 }
-
 .inputChat_black{
     text-indent: 1em;
     height: 30px;
@@ -171,7 +187,6 @@
     color:white;
 }
 
-
 .sendBtn_white{
     height: 30px;
     background-color: #b9b7b7;
@@ -179,11 +194,9 @@
     border: solid 2px white;
     color: white;
 }
-
 .sendBtn_white:hover{
     background-color: #494747;
 }
-
 .sendBtn_black{
     height: 30px;
     background-color: black;
@@ -192,7 +205,7 @@
     color: white;
 }
 .sendBtn_black:hover{
-    background-color: #C9C7C7;
+    background-color: white;
     color: black;
 }
 
@@ -200,7 +213,7 @@
     height: 30px;
 }
 
-.settingChatBox{
+.settingChatBox_white{
     position: absolute;
     color:white;
     width: 300px;
@@ -210,8 +223,18 @@
     right :30px;
     border-radius: 20px;
 }
-
-.settingChatBox > button{
+.settingChatBox_black{
+    position: absolute;
+    color:white;
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    bottom : 50px;
+    right :30px;
+    border: white 2px solid;
+    border-radius: 20px;
+}
+.settingChatBox_white > button, .settingChatBox_black > button{
     position:absolute;
     right:10px;
     top:10px;
@@ -223,8 +246,12 @@
 .settingChatBox > button:hover{
     color:#494747
 }
+.settingChatBox_black > button:hover{
+    color:black;
+    background:white;
+}
 
-.settingBox{
+.settingBox_white{
     position:absolute;
     right: 60px;
     top:10px;
@@ -234,4 +261,23 @@
     height: 230px;
     padding: 20px;
     border-radius: 20px;
+}
+.settingBox_black{
+    position:absolute;
+    right: 60px;
+    top:10px;
+    color:white;
+    background-color:black;
+    border: white solid 2px;
+    width: 300px;
+    height: 230px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.chatText_white{
+    color:black;
+}
+.chatText_black{
+    color:white;
 }

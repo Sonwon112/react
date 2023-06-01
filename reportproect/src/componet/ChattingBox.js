@@ -21,7 +21,7 @@ const ChattingBox = () => {
         <div className='chattingBox' id={theme}>
             <ShowChat chatRecord = {chatRecord} />
             <InputChat addChatRecord = {addChatRecord} convertIsSetting = {setIsShowSetting}/>
-            {isShowSetting?<SettingChat convertIsSetting = {setIsShowSetting}/>:<div/>}
+            {isShowSetting?<SettingChat convertIsSetting = {setIsShowSetting} theme={theme}/>:<div/>}
         </div>
     )
 }

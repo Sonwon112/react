@@ -4,65 +4,77 @@ import serachBtnThemeWhite_hover from '../res/search_btn_theme_white_hover.png';
 import settingBtnThemeWhite from '../res/setting_btn_theme_white.png';
 import settingBtnThemeWhite_hover from '../res/setting_btn_theme_white_hover.png';
 
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../ThemeContext';
 
 
 function SearchBar(props) {
     // console.log("SearchBar");
     const {theme} = useContext(ThemeContext);
+    let searchBtn = document.getElementById(`searchBtn`);
+    let settingBtn = document.getElementById(`settingBtn`);
 
     const searchBtnMouseOver = ()=>{
-        let searchBtn = document.getElementById(`searchBtn_${theme}`);
         switch(theme){
             case 'white':
                 searchBtn.style.backgroundColor = '#C9C7C7';
                 searchBtn.src = serachBtnThemeWhite_hover;
                 break;
             case 'black':
-                
+                searchBtn.src = serachBtnThemeWhite_hover;
                 break;
         }
     };
 
     const searchBtnMouseLeave = ()=>{
-        let searchBtn = document.getElementById(`searchBtn_${theme}`);
         switch(theme){
             case 'white':
                 searchBtn.style.backgroundColor = '#ffffff';
                 searchBtn.src = searchBtnThemeWhite;
                 break;
             case 'black':
+                searchBtn.src = searchBtnThemeWhite;
                 break;
         }
     };
 
     const settingBtnMouseOver = ()=>{
-        let settingBtn = document.getElementById(`settingBtn`);
         switch(theme){
             case 'white' :
                 settingBtn.style.backgroundColor = '#C9C7C7';
                 settingBtn.src = settingBtnThemeWhite_hover;
                 break;
             case 'black' :
+                settingBtn.src = settingBtnThemeWhite_hover;
                 break;
         }
     }
     const settingBtnMouseLeave = ()=>{
-        let settingBtn = document.getElementById(`settingBtn`);
         switch(theme){
             case 'white' :
                 settingBtn.style.backgroundColor = '#ffffff';
                 settingBtn.src = settingBtnThemeWhite;
                 break;
             case 'black' :
+                settingBtn.src = settingBtnThemeWhite;
                 break;
         }
     }
     const clickSetting = ()=>{
         props.convertIsSettingOn((prev)=>!prev);
     }
-
+    useEffect(()=>{
+        switch(theme){
+            case 'white':
+                searchBtn.style.backgroundColor = '#ffffff';
+                settingBtn.style.backgroundColor = '#ffffff';
+                break;
+            case 'black':
+                searchBtn.style.backgroundColor = '#000000';
+                settingBtn.style.backgroundColor = '#000000';
+                break;
+        }
+    },[theme]);
 
     return (
         <div className='searchTitle' id={theme}>

@@ -8,7 +8,7 @@ const SettingChat = memo((props) => {
         props.convertIsSetting((prev)=>!prev);
     }
     return (
-        <div className='settingChatBox'>
+        <div className={`settingChatBox_${props.theme}`}>
             <button onClick={clickClose}>X</button>
             <p style={{marginLeft:"20px"}}>색상변경</p>
             <div style={{display:"flex",justifyContent:"space-around"}}>

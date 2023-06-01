@@ -23,24 +23,12 @@ const InputChat = (props) => {
 
     const overMouseChatSetting = ()=>{
       let chatSetting = document.getElementsByClassName("chatSetting");
-      switch(theme){
-        case "white":
-            chatSetting[0].src = chatSettingBtnHover;
-          break;
-        case "black":
-          break;
-      }
+      chatSetting[0].src = chatSettingBtnHover;
     }
 
     const leaveMouseChatSetting = ()=>{
       let chatSetting = document.getElementsByClassName("chatSetting");
-      switch(theme){
-        case "white":
-            chatSetting[0].src = chatSettingBtn;
-          break;
-        case "black":
-          break;
-      }
+      chatSetting[0].src = chatSettingBtn;
     }
 
     const clickChatSetting = ()=>{

@@ -6,7 +6,7 @@ const ChattingText = memo((props) => {
     <div style={{display:"flex",flexDirection:"row"}}>
         <div className='chatTimeText' style={{color:'#aaaaaa'}}>{props.time}</div>
         <div className='chatUserText' style={{color:`${props.userColor}`}}>&nbsp;{props.user}:</div>
-        <div className='chatText'>&nbsp;{props.text}</div>
+        <div className={`chatText_${props.theme}`}>&nbsp;{props.text}</div>
     </div>
   )
 });
