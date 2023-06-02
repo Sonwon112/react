@@ -1,3 +1,5 @@
+// 최초 실행시 유저의 닉네임을 입력받아오는 창 컴포넌트
+
 import React,{useContext,useState} from 'react'
 import { ThemeContext } from '../ThemeContext'
 

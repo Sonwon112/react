@@ -1,3 +1,5 @@
+// 채팅들이 보여지는 박스 컴포넌트
+
 import React,{useContext} from 'react'
 import ChattingText from './ChattingText'
 

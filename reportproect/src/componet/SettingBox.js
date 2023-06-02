@@ -1,3 +1,5 @@
+// 닉네임 변경과 테마 변경을 설정하는 설정창 컴포넌트
+
 import React,{useContext, useState} from 'react';
 import { ThemeContext } from '../ThemeContext';
 

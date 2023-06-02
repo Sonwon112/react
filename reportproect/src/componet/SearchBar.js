@@ -1,3 +1,4 @@
+// 검색바 컴포넌트로 검색창과 세팅버튼 포함
 import React from 'react'
 import searchBtnThemeWhite from '../res/search_btn_theme_white.png';
 import serachBtnThemeWhite_hover from '../res/search_btn_theme_white_hover.png';
@@ -63,16 +64,20 @@ function SearchBar(props) {
     const clickSetting = ()=>{
         props.convertIsSettingOn((prev)=>!prev);
     }
+
+    // 테마 변경시 버튼들의 배경색을 테마에 맞게 변경하는 useEffect
     useEffect(()=>{
-        switch(theme){
-            case 'white':
-                searchBtn.style.backgroundColor = '#ffffff';
-                settingBtn.style.backgroundColor = '#ffffff';
-                break;
-            case 'black':
-                searchBtn.style.backgroundColor = '#000000';
-                settingBtn.style.backgroundColor = '#000000';
-                break;
+        if(searchBtn !== null && settingBtn !== null){
+            switch(theme){
+                case 'white':
+                    searchBtn.style.backgroundColor = '#ffffff';
+                    settingBtn.style.backgroundColor = '#ffffff';
+                    break;
+                case 'black':
+                    searchBtn.style.backgroundColor = '#000000';
+                    settingBtn.style.backgroundColor = '#000000';
+                    break;
+            }
         }
     },[theme]);
 

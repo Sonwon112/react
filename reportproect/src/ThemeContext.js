@@ -8,9 +8,10 @@ export const ThemeProvider = props =>{
     const [theme,setTheme] = useState("white");
     const [user,setUser] = useState("none");
     const [userColor, setUserColor] = useState("pink");
+    const [recentChat, setRecentChat] = useState("");
 
     return(
-        <ThemeContext.Provider value={{theme,setTheme,user,setUser,userColor,setUserColor}}>
+        <ThemeContext.Provider value={{theme,setTheme,user,setUser,userColor,setUserColor,recentChat,setRecentChat}}>
             {children}
         </ThemeContext.Provider>
     )

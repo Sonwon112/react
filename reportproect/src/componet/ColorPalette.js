@@ -1,3 +1,5 @@
+// 닉네임 색깔을 변경하는 버튼 컴포넌트
+
 import React,{useContext} from 'react'
 import { ThemeContext } from '../ThemeContext'
 

@@ -1,3 +1,5 @@
+// 보여지는 채팅의 컴포넌트
+
 import React,{memo} from 'react'
 
 const ChattingText = memo((props) => {

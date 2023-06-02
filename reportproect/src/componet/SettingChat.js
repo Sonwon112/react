@@ -1,3 +1,5 @@
+// 닉네임 색상을 변경할 수 있는 채팅 설정 창 컴포넌트
+
 import React,{memo} from 'react'
 import ColorPalette from './ColorPalette';
 

@@ -281,3 +281,23 @@
 .chatText_black{
     color:white;
 }
+
+.mainContentBox_white,.mainContentBox_black{
+    position: absolute;
+    border:#b9b7b7 solid 2px;
+    width: 1150px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    margin-top:10px;
+    margin-left:400px;
+}
+
+.mainContentBox_white{
+    color:black;
+}
+.mainContentBox_black{
+    color:white;
+}

@@ -1,3 +1,5 @@
+// 채팅을 입력하는 컴포넌트
+
 import React from 'react'
 import { useContext, useState } from 'react'
 import { ThemeContext } from '../ThemeContext'
@@ -12,11 +14,13 @@ const black_style={
 const InputChat = (props) => {
     // console.log("InputChat");
     const {theme} = useContext(ThemeContext);
-    const {user} = useContext(ThemeContext);
+    // const {user} = useContext(ThemeContext);
+    const {setRecentChat} = useContext(ThemeContext);
     const [inputData, setInputData] = useState("");
     const send = ()=>{
       if(inputData !== ""){
         props.addChatRecord(inputData);
+        setRecentChat(inputData);
         setInputData("");
       }
     }
